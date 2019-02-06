@@ -14,7 +14,8 @@
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "kayn": "^0.9.8"
+    "kayn": "^0.9.8",
+    "xregexp": "^4.2.4"
   },
   "devDependencies": {
     "jest": "^24.1.0",
