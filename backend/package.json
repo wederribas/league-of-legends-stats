@@ -8,5 +8,12 @@
   },
   "keywords": [],
   "author": "Weder Ribas <wederribas@gmail.com> (https://www.wederribas.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0"
+  }
 }
