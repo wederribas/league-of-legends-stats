@@ -1,8 +1,8 @@
 const router = require('express').Router()
+const { InvalidSummonerName } = require('../../lib/helpers')
 const {
   getSummonerByName,
-  getRecentMatchesByAccountId,
-  InvalidSummonerName
+  getRecentMatchesByAccountId
 } = require('../../lib/utils')
 
 router.get('/:summonerName', async function(req, res, next) {
@@ -20,7 +20,17 @@ router.get('/:summonerName', async function(req, res, next) {
 
 router.get('/:accountId/matches', async function(req, res, next) {
   try {
-    const summoner = await getRecentMatchesByAccountId(req.params.accountId)
+    // Ensure the page param is a number and start as 0 if not provided
+    let startIndex = 0
+    if (req.query.start && Number.isInteger(parseInt(req.query.start))) {
+      startIndex = req.query.start
+    }
+
+    const summoner = await getRecentMatchesByAccountId(
+      req.params.accountId,
+      startIndex
+    )
+
     return res.json(summoner)
   } catch (err) {
     if (err instanceof InvalidSummonerName) {
