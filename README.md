@@ -32,7 +32,6 @@ cd league-of-legends-stats
 Then export the environment variables required to run the backend application:
 
 ```
-export BASE_URL=http://localhost:5000/
 export PORT=5000
 export RIOT_API_KEY=<replace_this_with_your_own_key>
 
