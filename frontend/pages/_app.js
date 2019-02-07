@@ -1,4 +1,5 @@
 import App, { Container } from 'next/app'
+import MainPage from '../components/MainPage'
 
 class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -15,7 +16,9 @@ class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <Container>
-        <Component {...pageProps} />
+        <MainPage>
+          <Component {...pageProps} />
+        </MainPage>
       </Container>
     )
   }
