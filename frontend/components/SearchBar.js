@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
+  margin: 2rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -13,9 +14,9 @@ const StyledInput = styled.input`
   width: 50%;
   height: 50px;
   border-radius: 6px;
-  -webkit-box-shadow: 0px 9px 69px -17px rgba(0, 0, 0, 0.9);
-  -moz-box-shadow: 0px 9px 69px -17px rgba(0, 0, 0, 0.9);
-  box-shadow: 0px 9px 69px -17px rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: ${props => props.theme.bs};
+  -moz-box-shadow: ${props => props.theme.bs};
+  box-shadow: ${props => props.theme.bs};
   border: none;
   font-size: 15pt;
   padding-left: 10px;
@@ -32,8 +33,8 @@ const Button = styled.button`
   font-size: 11pt;
   border-radius: 6px;
   border: none;
-  -webkit-box-shadow: 0px 9px 69px -17px rgba(0, 0, 0, 0.9);
-  -moz-box-shadow: 0px 9px 69px -17px rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: ${props => props.theme.bs};
+  -moz-box-shadow: ${props => props.theme.bs};
   box-shadow: 0px 12px 69px -13px rgba(0, 0, 0, 0.9);
 `
 
@@ -50,8 +51,7 @@ export default class Input extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-
-    console.log(this.state.summonerName)
+    this.props.handleSubmit(this.state.summonerName)
   }
 
   render() {

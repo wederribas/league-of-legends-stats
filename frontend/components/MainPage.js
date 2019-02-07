@@ -7,9 +7,10 @@ const theme = {
   grey: '#9FB3C8',
   lightgrey: '#F0F4F8',
   darkgrey: '#334E68',
-  offWhite: '#EDEDED',
   green: '#3EBD93',
   darkgreen: '#014D40',
+  red: '#CF1124',
+  blue: '##1992D4',
   maxWidth: '1000px',
   height: '100%',
   bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)'
@@ -53,6 +54,41 @@ const GlobalStyle = createGlobalStyle`
   }
   input:focus {
     outline: none;
+  }
+
+  # Those rules are specific to the loading component
+  @keyframes bouncing-loader {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0.1;
+      transform: translateY(-1rem);
+    }
+  }
+
+  .bouncing-loader {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .bouncing-loader > div {
+    width: 1rem;
+    height: 1rem;
+    margin: 0.7rem 0.2rem;
+    background: #8385aa;
+    border-radius: 50%;
+    animation: bouncing-loader 0.6s infinite alternate;
+  }
+
+  .bouncing-loader > div:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .bouncing-loader > div:nth-child(3) {
+    animation-delay: 0.2s;
   }
 `
 

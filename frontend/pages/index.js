@@ -1,8 +1,8 @@
-import SearchBar from '../components/SearchBar'
+import Container from '../components/Container'
 
 const Index = () => (
   <section>
-    <SearchBar />
+    <Container />
   </section>
 )
 
