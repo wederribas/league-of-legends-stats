@@ -30,7 +30,10 @@ const Summoner = props => {
   const { name, profileIconId, summonerLevel } = props.data
   return (
     <Article>
-      <Icon src={PROFILE_ICON_URL + profileIconId + '.png'} />
+      <Icon
+        src={PROFILE_ICON_URL + profileIconId + '.png'}
+        alt="Summoner Icon"
+      />
       <Name>{name}</Name>
       <Level>Level {summonerLevel}</Level>
     </Article>
