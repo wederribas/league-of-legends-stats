@@ -4,9 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next -p 3000",
+    "build": "next build",
+    "start": "next start",
+    "test": "NODE_ENV=test jest --watch"
   },
   "keywords": [],
   "author": "Weder Ribas <wederribas@gmail.com> (https://www.wederribas.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1"
+  }
 }
