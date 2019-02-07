@@ -8,6 +8,8 @@ const theme = {
   lightgrey: '#F0F4F8',
   darkgrey: '#334E68',
   offWhite: '#EDEDED',
+  green: '#3EBD93',
+  darkgreen: '#014D40',
   maxWidth: '1000px',
   height: '100%',
   bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)'
@@ -32,7 +34,6 @@ const GlobalStyle = createGlobalStyle`
   html {
     height: ${props => props.theme.height};
     box-sizing: border-box;
-    font-size: 10px;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -49,6 +50,9 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: ${theme.black};
+  }
+  input:focus {
+    outline: none;
   }
 `
 
