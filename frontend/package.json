@@ -13,6 +13,7 @@
   "author": "Weder Ribas <wederribas@gmail.com> (https://www.wederribas.com)",
   "license": "MIT",
   "dependencies": {
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^7.0.2",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
